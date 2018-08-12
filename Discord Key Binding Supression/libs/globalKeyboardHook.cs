@@ -8,7 +8,7 @@ namespace Utilities {
 	/// <summary>
 	/// A class that manages a global low level keyboard hook
 	/// </summary>
-	class globalKeyboardHook {
+	class GlobalKeyboardHook {
 		#region Constant, Structure and Delegate Definitions
 		/// <summary>
 		/// defines the callback type for the hook
@@ -55,17 +55,17 @@ namespace Utilities {
 
 		#region Constructors and Destructors
 		/// <summary>
-		/// Initializes a new instance of the <see cref="globalKeyboardHook"/> class and installs the keyboard hook.
+		/// Initializes a new instance of the <see cref="GlobalKeyboardHook"/> class and installs the keyboard hook.
 		/// </summary>
-		public globalKeyboardHook() {
+		public GlobalKeyboardHook() {
 			hook();
 		}
 
 		/// <summary>
 		/// Releases unmanaged resources and performs other cleanup operations before the
-		/// <see cref="globalKeyboardHook"/> is reclaimed by garbage collection and uninstalls the keyboard hook.
+		/// <see cref="GlobalKeyboardHook"/> is reclaimed by garbage collection and uninstalls the keyboard hook.
 		/// </summary>
-		~globalKeyboardHook() {
+		~GlobalKeyboardHook() {
 			unhook();
 		}
 		#endregion
@@ -150,20 +150,5 @@ namespace Utilities {
 		[DllImport("kernel32.dll")]
 		static extern IntPtr LoadLibrary(string lpFileName);
         #endregion
-
-        // https://social.msdn.microsoft.com/Forums/vstudio/en-US/95c1d459-eda3-4e5f-9751-4b5c73b65fc6/how-to-simulate-keyboard-input-to-another-application?forum=csharpgeneral
-
-        [DllImport("user32.dll", SetLastError = true)]
-        public static extern IntPtr FindWindow(string lpClassName, string lpWindowName);
-
-        [DllImport("user32.dll", SetLastError = true)]
-        public static extern IntPtr FindWindowEx(IntPtr hwndParent, IntPtr hwndChildAfter, string lpszClass, string lpszWindow);
-
-        [return: MarshalAs(UnmanagedType.Bool)]
-        [DllImport("user32.dll", SetLastError = true)]
-        public static extern bool PostMessage(IntPtr hWnd, int Msg, Keys wParam, IntPtr lParam);
-
-        [DllImport("User32.dll")]
-        public static extern int SendMessage(IntPtr hWnd, int uMsg, int wParam, string lParam);
     }
 }
