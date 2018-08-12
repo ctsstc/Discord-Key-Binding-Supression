@@ -16,7 +16,7 @@ namespace Discord_Key_Binding_Supression
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new FormMainConfig());
         }
     }
 }
