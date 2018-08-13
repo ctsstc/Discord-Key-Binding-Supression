@@ -79,9 +79,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(74, 14);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(120, 20);
+            this.label1.Size = new System.Drawing.Size(129, 20);
             this.label1.TabIndex = 2;
-            this.label1.Text = "Key to Supress:";
+            this.label1.Text = "Key to Suppress:";
             // 
             // checkBoxToggleOn
             // 
@@ -126,9 +126,9 @@
             this.labelKeyToSupress.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.labelKeyToSupress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelKeyToSupress.ForeColor = System.Drawing.Color.GreenYellow;
-            this.labelKeyToSupress.Location = new System.Drawing.Point(200, 7);
+            this.labelKeyToSupress.Location = new System.Drawing.Point(209, 7);
             this.labelKeyToSupress.Name = "labelKeyToSupress";
-            this.labelKeyToSupress.Size = new System.Drawing.Size(100, 35);
+            this.labelKeyToSupress.Size = new System.Drawing.Size(91, 35);
             this.labelKeyToSupress.TabIndex = 6;
             this.labelKeyToSupress.Text = "Oemtilde";
             this.labelKeyToSupress.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -137,7 +137,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(101, 51);
+            this.label2.Location = new System.Drawing.Point(111, 51);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(92, 20);
             this.label2.TabIndex = 7;
@@ -150,9 +150,9 @@
             this.comboBoxMapKeys.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.comboBoxMapKeys.ForeColor = System.Drawing.Color.GreenYellow;
             this.comboBoxMapKeys.FormattingEnabled = true;
-            this.comboBoxMapKeys.Location = new System.Drawing.Point(199, 48);
+            this.comboBoxMapKeys.Location = new System.Drawing.Point(209, 48);
             this.comboBoxMapKeys.Name = "comboBoxMapKeys";
-            this.comboBoxMapKeys.Size = new System.Drawing.Size(190, 28);
+            this.comboBoxMapKeys.Size = new System.Drawing.Size(180, 28);
             this.comboBoxMapKeys.TabIndex = 8;
             this.comboBoxMapKeys.Text = "F13";
             this.comboBoxMapKeys.SelectedIndexChanged += new System.EventHandler(this.comboBoxMapKeys_SelectedIndexChanged);
