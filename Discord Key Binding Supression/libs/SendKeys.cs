@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Runtime.InteropServices;
 using System.Windows.Forms;
 using Utilities;
@@ -9,13 +10,24 @@ namespace Utilities
 
     class SendKeys
     {
-        public static void toWindow(string windowTitle, Keys keys)
+        public static void toWindow(Process process, Keys keys, int type = NativeMethods.WM_KEYDOWN)
+        {
+            toWindow(process.MainWindowHandle, keys, type);
+        }
+
+        public static void toWindow(string windowTitle, Keys keys, int type = NativeMethods.WM_KEYDOWN)
         {
             IntPtr windowHandle = NativeMethods.FindWindow(windowTitle, null);
+            toWindow(windowHandle, keys, type);
+        }
+
+        public static void toWindow(IntPtr windowHandle, Keys keys, int type = NativeMethods.WM_KEYDOWN)
+        {
             IntPtr editHandle = NativeMethods.FindWindowEx(windowHandle, IntPtr.Zero, "Edit", null);
 
             //NativeMethods.SendMessage(editHandle, NativeMethods.WM_SETTEXT, 0, "");
-            NativeMethods.PostMessage(editHandle, NativeMethods.WM_KEYDOWN, keys, IntPtr.Zero);
+            NativeMethods.PostMessage(windowHandle, type, keys, IntPtr.Zero);
+            //NativeMethods.PostMessage(editHandle, NativeMethods.WM_CHAR, keys, IntPtr.Zero);
         }
     }
 }

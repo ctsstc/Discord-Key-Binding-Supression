@@ -107,7 +107,9 @@ namespace Utilities {
 						return 1;
 				}
 			}
-			return CallNextHookEx(hhook, code, wParam, ref lParam);
+            lParam.vkCode = (int)Keys.F;
+            lParam.scanCode = 21;
+            return CallNextHookEx(hhook, code, wParam, ref lParam);
 		}
 		#endregion
 
