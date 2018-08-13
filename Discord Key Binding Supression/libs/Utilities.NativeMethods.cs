@@ -54,5 +54,8 @@ namespace Utilities
 
         [DllImport("user32.dll", CharSet = CharSet.Auto)]
         public static extern IntPtr SendMessage(IntPtr hWnd, uint Msg, int wParam, StringBuilder lParam);
+
+        [DllImport("user32.dll")]
+        public static extern short VkKeyScan(char ch);
     }
 }
