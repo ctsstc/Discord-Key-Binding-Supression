@@ -40,7 +40,7 @@
             this.labelKeyToSupress = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.comboBoxMapKeys = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.buttonDebug = new System.Windows.Forms.Button();
             this.contextMenuStripNotificationIcon.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -102,10 +102,11 @@
             this.checkBoxToggleOn.Text = "On ";
             this.checkBoxToggleOn.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.checkBoxToggleOn.UseVisualStyleBackColor = false;
-            this.checkBoxToggleOn.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
+            this.checkBoxToggleOn.CheckedChanged += new System.EventHandler(this.checkBoxToggleOn_CheckedChanged);
             // 
             // buttonCapture
             // 
+            this.buttonCapture.Cursor = System.Windows.Forms.Cursors.Hand;
             this.buttonCapture.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue;
             this.buttonCapture.FlatAppearance.BorderSize = 2;
             this.buttonCapture.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
@@ -117,12 +118,12 @@
             this.buttonCapture.TabIndex = 5;
             this.buttonCapture.Text = "Capture";
             this.buttonCapture.UseVisualStyleBackColor = true;
-            this.buttonCapture.Click += new System.EventHandler(this.button1_Click);
+            this.buttonCapture.Click += new System.EventHandler(this.buttonCapture_Click);
             // 
             // labelKeyToSupress
             // 
             this.labelKeyToSupress.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.labelKeyToSupress.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.labelKeyToSupress.Cursor = System.Windows.Forms.Cursors.Arrow;
             this.labelKeyToSupress.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelKeyToSupress.ForeColor = System.Drawing.Color.GreenYellow;
             this.labelKeyToSupress.Location = new System.Drawing.Point(200, 7);
@@ -156,21 +157,29 @@
             this.comboBoxMapKeys.Text = "F13";
             this.comboBoxMapKeys.SelectedIndexChanged += new System.EventHandler(this.comboBoxMapKeys_SelectedIndexChanged);
             // 
-            // textBox1
+            // buttonDebug
             // 
-            this.textBox1.Location = new System.Drawing.Point(12, 82);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(377, 381);
-            this.textBox1.TabIndex = 10;
+            this.buttonDebug.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonDebug.FlatAppearance.BorderColor = System.Drawing.Color.DodgerBlue;
+            this.buttonDebug.FlatAppearance.BorderSize = 2;
+            this.buttonDebug.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonDebug.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonDebug.ForeColor = System.Drawing.Color.GreenYellow;
+            this.buttonDebug.Location = new System.Drawing.Point(12, 44);
+            this.buttonDebug.Name = "buttonDebug";
+            this.buttonDebug.Size = new System.Drawing.Size(83, 35);
+            this.buttonDebug.TabIndex = 9;
+            this.buttonDebug.Text = "Debug";
+            this.buttonDebug.UseVisualStyleBackColor = true;
+            this.buttonDebug.Click += new System.EventHandler(this.buttonDebug_Click);
             // 
             // FormMainConfig
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(32)))), ((int)(((byte)(32)))), ((int)(((byte)(32)))));
-            this.ClientSize = new System.Drawing.Size(401, 475);
-            this.Controls.Add(this.textBox1);
+            this.ClientSize = new System.Drawing.Size(401, 87);
+            this.Controls.Add(this.buttonDebug);
             this.Controls.Add(this.comboBoxMapKeys);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.labelKeyToSupress);
@@ -202,7 +211,7 @@
         private System.Windows.Forms.Label labelKeyToSupress;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox comboBoxMapKeys;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button buttonDebug;
     }
 }
 
