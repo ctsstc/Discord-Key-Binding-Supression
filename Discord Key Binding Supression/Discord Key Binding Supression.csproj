@@ -93,6 +93,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FormDebug.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormDebug.Designer.cs">
+      <DependentUpon>FormDebug.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormMainConfig.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -110,6 +116,9 @@
     <Compile Include="libs\SendKeys.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FormDebug.resx">
+      <DependentUpon>FormDebug.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormMainConfig.resx">
       <DependentUpon>FormMainConfig.cs</DependentUpon>
     </EmbeddedResource>

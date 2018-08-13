@@ -129,7 +129,7 @@
             this.labelKeyToSupress.Name = "labelKeyToSupress";
             this.labelKeyToSupress.Size = new System.Drawing.Size(100, 35);
             this.labelKeyToSupress.TabIndex = 6;
-            this.labelKeyToSupress.Text = "A";
+            this.labelKeyToSupress.Text = "Oemtilde";
             this.labelKeyToSupress.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // label2
@@ -153,7 +153,7 @@
             this.comboBoxMapKeys.Name = "comboBoxMapKeys";
             this.comboBoxMapKeys.Size = new System.Drawing.Size(190, 28);
             this.comboBoxMapKeys.TabIndex = 8;
-            this.comboBoxMapKeys.Text = "B";
+            this.comboBoxMapKeys.Text = "F13";
             this.comboBoxMapKeys.SelectedIndexChanged += new System.EventHandler(this.comboBoxMapKeys_SelectedIndexChanged);
             // 
             // textBox1

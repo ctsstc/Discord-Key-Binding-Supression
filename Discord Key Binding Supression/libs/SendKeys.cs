@@ -29,5 +29,11 @@ namespace Utilities
             NativeMethods.PostMessage(windowHandle, type, keys, IntPtr.Zero);
             //NativeMethods.PostMessage(editHandle, NativeMethods.WM_CHAR, keys, IntPtr.Zero);
         }
+
+        public static void asKeyboard(Keys key, bool down = true)
+        {
+            uint pressType = down ? NativeMethods.KEYEVENTF_EXTENDEDKEY : NativeMethods.KEYEVENTF_KEYUP;
+            NativeMethods.keybd_event((byte)key, 0, pressType, 0);
+        }
     }
 }

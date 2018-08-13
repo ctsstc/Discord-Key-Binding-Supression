@@ -10,6 +10,9 @@ namespace Utilities
         public const int WM_KEYDOWN = 0x0100;
         public const int WM_KEYUP = 0x0101;
         public const int WM_CHAR = 0x0102;
+        // https://stackoverflow.com/questions/14395377/how-to-simulate-a-ctrl-a-ctrl-c-using-keybd-event
+        public const uint KEYEVENTF_EXTENDEDKEY = 0x0001; //Key down flag
+        public const uint KEYEVENTF_KEYUP = 0x0002; //Key up flag
 
         // https://social.msdn.microsoft.com/Forums/vstudio/en-US/95c1d459-eda3-4e5f-9751-4b5c73b65fc6/how-to-simulate-keyboard-input-to-another-application?forum=csharpgeneral
 
@@ -36,10 +39,10 @@ namespace Utilities
 
         // https://www.pinvoke.net/default.aspx/user32.keybd_event
         [DllImport("user32.dll")]
-        static extern void keybd_event(byte bVk, byte bScan, uint dwFlags, UIntPtr dwExtraInfo);
+        public static extern void keybd_event(byte bVk, byte bScan, uint dwFlags, UIntPtr dwExtraInfo);
 
         [DllImport("user32.dll")]
-        static extern void keybd_event(byte bVk, byte bScan, uint dwFlags, int dwExtraInfo);
+        public static extern void keybd_event(byte bVk, byte bScan, uint dwFlags, int dwExtraInfo);
 
     }
 }

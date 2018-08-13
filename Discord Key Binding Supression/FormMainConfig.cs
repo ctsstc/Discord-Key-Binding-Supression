@@ -111,7 +111,8 @@ namespace Discord_Key_Binding_Supression
                     //Utilities.SendKeys.toWindow(this.processes[0], e.KeyCode);
                     e.Handled = true;
                     e.SuppressKeyPress = true;
-                    Utilities.SendKeys.toWindow(discordHandle, this.mappedKey);
+                    Utilities.SendKeys.asKeyboard(this.mappedKey);
+                    //Utilities.SendKeys.toWindow(discordHandle, this.mappedKey);
                     //this.textBox1.Text += "\r\nSent to: " + discordHandle.ToString("X") + "\r\n";
                 }
             }
@@ -125,6 +126,7 @@ namespace Discord_Key_Binding_Supression
             Process process = Process.GetProcessById((int)procId);
             Utilities.SendKeys.toWindow(discordHandle, this.mappedKey, NativeMethods.WM_KEYUP);
             e.Handled = true;*/
+            Utilities.SendKeys.asKeyboard(this.mappedKey, false);
         }
 
         delegate bool EnumThreadDelegate(IntPtr hWnd, IntPtr lParam);
