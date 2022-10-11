@@ -14,3 +14,7 @@ Ultimately this remaps a key, and can be used with any other communication progr
 1. Press the key you would like to capture on the "Key Capture - Press a Key" window that pops up.
 1. Choose a key to map to with the Map to Key drop down box. I would reccomend an obscure key like F13-F20.
 1. Open Discord and change your settings to to use your new key - push yopur suppressed key and your mapped key should show up.
+
+## Y THO?
+
+If a game has a key that does something in the game, but you never use that key and would like to use it for your push-to-talk key, this works great for that. ie: tild ~ => F14 (A key most keyboards don't have anyways, but exists).
